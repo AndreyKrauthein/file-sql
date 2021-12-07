@@ -1,0 +1,32 @@
+CREATE SCHEMA `bercario` ;
+
+CREATE TABLE `doctors` (
+  `id_doctor` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `crm` int NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `specialty` varchar(255) NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
+  PRIMARY KEY (`id_doctor`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+SELECT * FROM bercario.doctors;
+
+INSERT INTO `bercario`.`doctors` (`id_doctor`, `crm`, `name`, `phone`, `specialty`, `createdAt`, `updatedAt`) VALUES ('35905d3d-0530-4118-8065-483719113e1b', '123', 'Leandro Alves', '51986165032', 'Médico', '2021-12-07 00:19:33', '2021-12-07 00:19:33');
+
+CREATE TABLE `moms` (
+  `id_mom` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `address` varchar(255) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `birthDate` datetime NOT NULL,
+  `createdAt` datetime NOT NULL,
+  `updatedAt` datetime NOT NULL,
+  PRIMARY KEY (`id_mom`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci
+
+SELECT * FROM bercario.moms;
+
+INSERT INTO `bercario`.`moms` (`id_mom`, `name`, `address`, `phone`, `birthDate`, `createdAt`, `updatedAt`) VALUES ('d6f05852-5dbf-460f-8b5a-b0ccb75b5845', 'Katiusce Lemos', 'rua doutor joão inacio 1005', '51986165032', '2021-12-07 00:23:33', '2021-12-07 00:33:41', '2021-12-07 00:33:41');
+
